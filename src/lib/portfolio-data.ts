@@ -43,7 +43,7 @@ export const FEATURED_WORK: FeaturedProject[] = [
     motionMode: "graph",
     links: [
       { label: "Explore live workspace", url: "https://ragner.vercel.app/" },
-      { label: "GitHub", url: "https://github.com/Saransh482003" },
+      { label: "GitHub", url: "https://github.com/Saransh482003/RAGner-Tri-Modal-RAG-Framework" },
     ],
   },
   {
@@ -59,7 +59,7 @@ export const FEATURED_WORK: FeaturedProject[] = [
     links: [
       {
         label: "View clinical RAG demo",
-        url: "https://ragner.vercel.app/explore?bot=triomics",
+        url: "https://github.com/Saransh482003/vasccoach-medical-rag-bot",
       },
     ],
   },
@@ -78,7 +78,7 @@ export const FEATURED_WORK: FeaturedProject[] = [
         label: "ResearchGate report",
         url: "https://www.researchgate.net/publication/392194582_CureCue_A_Smart_Adherence_Assistant_and_Reminder_System",
       },
-      { label: "GitHub", url: "https://github.com/Saransh482003" },
+      { label: "GitHub", url: "https://github.com/Saransh482003/cure-cue" },
     ],
   },
   {
@@ -91,7 +91,7 @@ export const FEATURED_WORK: FeaturedProject[] = [
     tech: "PyTorch · YOLO · Depth Anything V2 · MPRNet · OpenCV",
     videoSlug: "navigation",
     motionMode: "depth",
-    links: [{ label: "GitHub", url: "https://github.com/Saransh482003" }],
+    links: [{ label: "GitHub", url: "https://github.com/Saransh482003/Indoor-Navigation-Assistance-For-Visually-Impaired" }],
   },
 ];
 
@@ -109,7 +109,7 @@ export const PROJECTS_ARCHIVE: ArchiveProject[] = [
     tags: ["Qdrant", "Neo4j", "RAPTOR", "FastAPI", "Next.js"],
     links: [
       { label: "Live workspace", url: "https://ragner.vercel.app/" },
-      { label: "Source", url: "https://github.com/Saransh482003" },
+      { label: "Source", url: "https://github.com/Saransh482003/RAGner-Tri-Modal-RAG-Framework" },
     ],
   },
   {
@@ -125,8 +125,8 @@ export const PROJECTS_ARCHIVE: ArchiveProject[] = [
     tags: ["RAPTOR", "Neo4j", "Python", "Biomedical NLP"],
     links: [
       {
-        label: "Clinical demo instance",
-        url: "https://ragner.vercel.app/explore?bot=triomics",
+        label: "Source",
+        url: "https://github.com/Saransh482003/vasccoach-medical-rag-bot",
       },
     ],
   },
@@ -146,7 +146,7 @@ export const PROJECTS_ARCHIVE: ArchiveProject[] = [
         label: "ResearchGate paper",
         url: "https://www.researchgate.net/publication/392194582_CureCue_A_Smart_Adherence_Assistant_and_Reminder_System",
       },
-      { label: "Source", url: "https://github.com/Saransh482003" },
+      { label: "Source", url: "https://github.com/Saransh482003/cure-cue" },
     ],
   },
   {
@@ -160,7 +160,7 @@ export const PROJECTS_ARCHIVE: ArchiveProject[] = [
     summary:
       "Fuses MPRNet image denoising/deblurring and CLAHE preprocessing with YOLO object detection and Depth Anything V2 monocular depth estimation for indoor obstacle guidance.",
     tags: ["PyTorch", "YOLO", "Depth Anything V2", "MPRNet", "OpenCV"],
-    links: [{ label: "Source", url: "https://github.com/Saransh482003" }],
+    links: [{ label: "Source", url: "https://github.com/Saransh482003/Indoor-Navigation-Assistance-For-Visually-Impaired" }],
   },
   {
     id: "heart-mlops",
@@ -173,22 +173,7 @@ export const PROJECTS_ARCHIVE: ArchiveProject[] = [
     summary:
       "Production classification service containerized with Docker and orchestrated on Google Kubernetes Engine (GKE), featuring MLflow experiment tracking and Evidently AI data-drift monitoring.",
     tags: ["GCP (GKE)", "Docker", "Flask", "MLflow", "Evidently AI"],
-    links: [{ label: "Source", url: "https://github.com/Saransh482003" }],
-  },
-  {
-    id: "defect-seg",
-    category: "cv",
-    date: "2026",
-    title: "Industrial Surface Defect Segmentation",
-    domain: "Visual Inspection",
-    videoSlug: "defect-seg",
-    motionMode: "scan",
-    summary:
-      "Multi-class surface anomaly localization and segmentation pipeline built with PyTorch and segmentation-models-pytorch using a U-Net architecture with a ResNet34 backbone and Albumentations.",
-    tags: ["PyTorch", "U-Net", "ResNet34", "Albumentations"],
-    links: [
-      { label: "GitHub profile", url: "https://github.com/Saransh482003" },
-    ],
+    links: [{ label: "Source", url: "https://github.com/Saransh482003/Heart-Disease-Classification-MLOps" }],
   },
   {
     id: "tasim",
@@ -201,7 +186,7 @@ export const PROJECTS_ARCHIVE: ArchiveProject[] = [
     summary:
       "Automated technical viva simulator built with Next.js, Flask, ChromaDB, and Ollama (Llama 3) with text-to-speech interaction to evaluate responses against course lecture material.",
     tags: ["Next.js", "Flask", "ChromaDB", "Ollama (Llama 3)"],
-    links: [{ label: "Source", url: "https://github.com/Saransh482003" }],
+    links: [{ label: "Source", url: "https://github.com/Saransh482003/iitm-ta-interview-simulator" }],
   },
   {
     id: "htic-systems",
@@ -214,7 +199,7 @@ export const PROJECTS_ARCHIVE: ArchiveProject[] = [
     summary:
       "Real-time surgical transit dashboard tracking organ pH, temperature, humidity, and GPS from Arduino sensors to Firebase, alongside a Next.js vector-embedding publication search portal for ACT Lab.",
     tags: ["Next.js", "Vector Embeddings", "Arduino / IoT", "Firebase"],
-    links: [{ label: "Source", url: "https://github.com/Saransh482003" }],
+    links: [{ label: "Source", url: "https://github.com/Saransh482003/htic-scs-organ-monitoring-system" }],
   },
 ];
 

@@ -9,7 +9,7 @@ export default function CalendlyAndContact() {
   const [org, setOrg] = useState("");
   const [subject, setSubject] = useState("Custom RAG / Knowledge Graph System");
   const [notes, setNotes] = useState("");
-  const [showCalendlyEmbed, setShowCalendlyEmbed] = useState(false);
+  const [showCalendlyEmbed, setShowCalendlyEmbed] = useState(true);
   const [copied, setCopied] = useState(false);
 
   const hasCustomCalendly =
@@ -17,17 +17,32 @@ export default function CalendlyAndContact() {
     SITE_CONFIG.calendlyUrl !== "https://calendly.com/";
 
   const formatMessage = () =>
-    `Name: ${name || "Sender"}${org ? `\nOrganization: ${org}` : ""}\nSubject: ${subject}\n\n${notes}`;
+    `Hi,\n\n`;
+
+  const getDraftParams = () => ({
+    subject: encodeURIComponent(
+      `${subject} — ${name.trim() || "Portfolio Inquiry"}`
+    ),
+    body: encodeURIComponent(formatMessage()),
+  });
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailSubj = encodeURIComponent(
-      `${subject} — ${name.trim() || "Portfolio Inquiry"}`
-    );
-    const mailBody = encodeURIComponent(formatMessage());
+    const { subject: mailSubj, body: mailBody } = getDraftParams();
+    // Triggers default OS / mobile mail app without opening a dead blank tab
+    window.location.href = `mailto:${SITE_CONFIG.email}?subject=${mailSubj}&body=${mailBody}`;
+  };
+
+  const handleOpenGmail = () => {
+    if (!name.trim() || !notes.trim()) return;
+    const { subject: mailSubj, body: mailBody } = getDraftParams();
+    // Opens a pre-filled draft directly in Gmail Web
     window.open(
-      `mailto:${SITE_CONFIG.email}?subject=${mailSubj}&body=${mailBody}`,
-      "_blank"
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+        SITE_CONFIG.email
+      )}&su=${mailSubj}&body=${mailBody}`,
+      "_blank",
+      "noopener,noreferrer"
     );
   };
 
@@ -272,11 +287,18 @@ export default function CalendlyAndContact() {
             </div>
 
             <div className="flex flex-wrap items-center gap-3 pt-1">
-              <button
+              {/* <button
                 type="submit"
                 className="px-4 py-2 rounded bg-ink-900 hover:bg-umber-700 text-paper-50 text-xs tracking-wide transition-colors"
               >
-                Send via Email
+                Open in Mail App
+              </button> */}
+              <button
+                type="button"
+                onClick={handleOpenGmail}
+                className="px-3.5 py-2 rounded border border-umber-600/50 bg-umber-100/50 hover:bg-umber-100 text-xs font-mono text-umber-700 transition-colors"
+              >
+                Open in Gmail ↗
               </button>
               <button
                 type="button"
